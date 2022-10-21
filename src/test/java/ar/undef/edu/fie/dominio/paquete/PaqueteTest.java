@@ -16,21 +16,21 @@ public class PaqueteTest {
         Paquete pqt = new Paquete();
 
         assertTrue(pqt.getEstado() instanceof Encargado);
-        pqt.estadoSiguiente();
+        pqt.enviarPaquete();
 
         assertTrue(pqt.getEstado() instanceof Enviado);
-        pqt.estadoSiguiente();
+        pqt.entregarPaquete();
 
         assertTrue(pqt.getEstado() instanceof Recibido);
     }
 
     @Test
-    @DisplayName("Dado un paquete enviado al volver al estado anterior cambia a encargado")
+    @DisplayName("Dado un paquete enviado al intentar volver a enviar permanece en el mismo estado")
     public void cambioEstadoAnterior() {
         Paquete pqt = new Paquete();
         pqt.setEstado(new Enviado());
-        pqt.estadoAnterior();
+        pqt.enviarPaquete();
 
-        assertTrue(pqt.getEstado() instanceof Encargado);
+        assertTrue(pqt.getEstado() instanceof Enviado);
     }
 }

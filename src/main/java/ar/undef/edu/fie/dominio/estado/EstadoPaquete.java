@@ -4,7 +4,7 @@ import ar.undef.edu.fie.dominio.paquete.Paquete;
 
 public interface EstadoPaquete {
 
-    void siguiente(Paquete pqt);
-    void anterior(Paquete pqt);
+    void enviar(Paquete pqt);
+    void entregar(Paquete pqt);
     void imprimirEstado();
 }

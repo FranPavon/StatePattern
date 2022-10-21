@@ -15,12 +15,12 @@ public class Paquete {
         this.estado = estado;
     }
 
-    public void estadoAnterior() {
-        estado.anterior(this);
+    public void entregarPaquete() {
+        estado.entregar(this);
     }
 
-    public void estadoSiguiente() {
-        estado.siguiente(this);
+    public void enviarPaquete() {
+        estado.enviar(this);
     }
 
     public void imprimirEstado() {

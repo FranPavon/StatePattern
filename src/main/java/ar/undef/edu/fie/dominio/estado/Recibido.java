@@ -5,14 +5,13 @@ import ar.undef.edu.fie.dominio.paquete.Paquete;
 public class Recibido implements EstadoPaquete{
 
     @Override
-    public void siguiente(Paquete pqt) {
-        System.out.println("El paquete ya fue entregado al destinatario, no tiene un estado posterior.");
+    public void enviar(Paquete pqt) {
+        System.out.println("El paquete ya fue entregado al destinatario");
     }
 
     @Override
-    public void anterior(Paquete pqt) {
-        pqt.setEstado(new Enviado());
-    }
+    public void entregar(Paquete pqt) {
+        System.out.println("El paquete ya fue entregado al destinatario.");    }
 
     @Override
     public void imprimirEstado() {

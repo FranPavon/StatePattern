@@ -8,13 +8,13 @@ public class Main {
         Paquete pqt = new Paquete();
         pqt.imprimirEstado();
 
-        pqt.estadoSiguiente();
+        pqt.enviarPaquete();
         pqt.imprimirEstado();
 
-        pqt.estadoSiguiente();
+        pqt.entregarPaquete();
         pqt.imprimirEstado();
 
-        pqt.estadoSiguiente();
+        pqt.enviarPaquete();
         pqt.imprimirEstado();
     }
 }

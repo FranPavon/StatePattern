@@ -25,12 +25,10 @@ public class PaqueteTest {
     }
 
     @Test
-    @DisplayName("Dado un paquete enviado al intentar volver a enviar permanece en el mismo estado")
+    @DisplayName("Un paquete encargado no puede ser entregado sin ser eviado previamente")
     public void cambioEstadoAnterior() {
         Paquete pqt = new Paquete();
-        pqt.setEstado(new Enviado());
-        pqt.enviarPaquete();
-
-        assertTrue(pqt.getEstado() instanceof Enviado);
+        pqt.entregarPaquete();
+        assertTrue(pqt.getEstado() instanceof Encargado);
     }
 }
